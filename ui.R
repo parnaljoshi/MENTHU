@@ -22,7 +22,7 @@ shinyUI(function(request){
 						 				 
 						 				 #Sidebar panel with links
 						 				 column(2, wellPanel(
-						 				 	tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
+						 				 	tags$div(tags$span(a(href   = "http://3.17.87.198/", 
 						 				 											 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 				 	tags$br(),
 						 				 	tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -57,7 +57,7 @@ shinyUI(function(request){
 						 				 
 						 				 #Sidebar panel with links
 						 				 column(2, wellPanel(
-						 				 	tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
+						 				 	tags$div(tags$span(a(href   = "http://3.17.87.198/", 
 						 				 											 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 				 	tags$br(),
 						 				 	tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -612,7 +612,7 @@ shinyUI(function(request){
 						 	
 						 	#Sidebar panel with links
 						 	column(2, wellPanel(
-						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
+						 		tags$div(tags$span(a(href   = "http://3.17.87.198/", 
 						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -681,7 +681,7 @@ shinyUI(function(request){
 						 	#Sidebar panel with links
 						 	column(2, wellPanel(
 						 		#Sidebar panel with links
-						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
+						 		tags$div(tags$span(a(href   = "http://3.17.87.198/", 
 						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -692,26 +692,26 @@ shinyUI(function(request){
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
 						 												 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
-						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
-						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
-						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
-						 												 target = "_blank", tags$img(src = "isu-logo-alt.png",                  width = "100%")))),
-						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://www.mayoclinic.org", 
-						 												 target = "_blank", tags$img(src = "MC_stack_4c_DAC.png",               width = "100%")))),
-						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
-						 												 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
+						 		#tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
+						 		#										 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
+						 		#tags$br(),
+						 		#tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
+						 		#										 target = "_blank", tags$img(src = "isu-logo-alt.png",                  width = "100%")))),
+						 		#tags$br(),
+						 		#tags$div(tags$span(a(href   = "https://www.mayoclinic.org", 
+						 		#										 target = "_blank", tags$img(src = "MC_stack_4c_DAC.png",               width = "100%")))),
+						 		#tags$br(),
+						 		#tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
+						 		#										 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://github.com/FriedbergLab/MENTHU", 
 						 												 target = "_blank", tags$img(src = "GitHub_Logo.png",                   width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://hub.docker.com/r/parnaljoshi/menthu", 
 						 												 target = "_blank", tags$img(src = "Docker_Logo.png",                   width = "100%")))),
-						 		tags$br(),
-						 		tags$div(tags$span(a(href = "https://dill-picl.org", 
-						 												 target = "_blank", tags$img(src = "lawlab_web_wiki_header.png",        width = "100%")))),
+						 		#tags$br(),
+						 		#tags$div(tags$span(a(href = "https://dill-picl.org", 
+						 		#										 target = "_blank", tags$img(src = "lawlab_web_wiki_header.png",        width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href = "https://www.nih.gov/", 
 						 												 target = "_blank", tags$img(src = "nihlogo.png",                       width = "100%"))))
@@ -730,7 +730,7 @@ shinyUI(function(request){
 						 	titlePanel(""),
 						 	#Sidebar panel with links
 						 	column(2, wellPanel(
-						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
+						 		tags$div(tags$span(a(href   = "http://3.17.87.198/", 
 						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -763,7 +763,7 @@ shinyUI(function(request){
 						 	titlePanel(""),
 						 	#Sidebar panel with links
 						 	column(2, wellPanel(
-						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
+						 		tags$div(tags$span(a(href   = "http://3.17.87.198/", 
 						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -806,7 +806,7 @@ shinyUI(function(request){
 						 	
 						 	#Sidebar panel with links
 						 	column(2, wellPanel(
-						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
+						 		tags$div(tags$span(a(href   = "http://3.17.87.198/", 
 						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
