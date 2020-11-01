@@ -22,7 +22,7 @@ shinyUI(function(request){
 						 				 
 						 				 #Sidebar panel with links
 						 				 column(2, wellPanel(
-						 				 	tags$div(tags$span(a(href   = "http://genesculpt.org/gss/", 
+						 				 	tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
 						 				 											 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 				 	tags$br(),
 						 				 	tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -34,10 +34,10 @@ shinyUI(function(request){
 						 				 	tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
 						 				 											 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
 						 				 	tags$br(),
-						 				 	tags$div(tags$span(a(href   = "https://github.com/Dobbs-Lab/MENTHU", 
+						 				 	tags$div(tags$span(a(href   = "https://github.com/FriedbergLab/MENTHU", 
 						 				 											 target = "_blank", tags$img(src = "GitHub_Logo.png",                   width = "100%")))),
 						 				 	tags$br(),
-						 				 	tags$div(tags$span(a(href   = "https://hub.docker.com/r/cmmann/menthu", 
+						 				 	tags$div(tags$span(a(href   = "https://hub.docker.com/r/parnaljoshi/menthu", 
 						 				 											 target = "_blank", tags$img(src = "Docker_Logo.png",                   width = "100%"))))
 						 				 	
 						 				 )),
@@ -57,7 +57,7 @@ shinyUI(function(request){
 						 				 
 						 				 #Sidebar panel with links
 						 				 column(2, wellPanel(
-						 				 	tags$div(tags$span(a(href   = "http://genesculpt.org/gss/", 
+						 				 	tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
 						 				 											 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 				 	tags$br(),
 						 				 	tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -69,10 +69,10 @@ shinyUI(function(request){
 						 				 	tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
 						 				 											 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
 						 				 	tags$br(),
-						 				 	tags$div(tags$span(a(href   = "https://github.com/Dobbs-Lab/MENTHU", 
+						 				 	tags$div(tags$span(a(href   = "https://github.com/FriedbergLab/MENTHU", 
 						 				 											 target = "_blank", tags$img(src = "GitHub_Logo.png",                   width = "100%")))),
 						 				 	tags$br(),
-						 				 	tags$div(tags$span(a(href   = "https://hub.docker.com/r/cmmann/menthu", 
+						 				 	tags$div(tags$span(a(href   = "https://hub.docker.com/r/parnaljoshi/menthu", 
 						 				 											 target = "_blank", tags$img(src = "Docker_Logo.png",                   width = "100%"))))
 						 				 )),
 						 				 
@@ -612,7 +612,7 @@ shinyUI(function(request){
 						 	
 						 	#Sidebar panel with links
 						 	column(2, wellPanel(
-						 		tags$div(tags$span(a(href   = "http://genesculpt.org/gss/", 
+						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
 						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -624,10 +624,10 @@ shinyUI(function(request){
 						 		tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
 						 												 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
 						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://github.com/Dobbs-Lab/MENTHU", 
+						 		tags$div(tags$span(a(href   = "https://github.com/FriedbergLab/MENTHU", 
 						 												 target = "_blank", tags$img(src = "GitHub_Logo.png",                   width = "100%")))),
 						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://hub.docker.com/r/cmmann/menthu", 
+						 		tags$div(tags$span(a(href   = "https://hub.docker.com/r/parnaljoshi/menthu", 
 						 												 target = "_blank", tags$img(src = "Docker_Logo.png",                   width = "100%"))))
 						 		
 						 	)),
@@ -636,15 +636,15 @@ shinyUI(function(request){
 						 	column(9, wellPanel(
 						 		h3("Download MENTHU"),
 						 		tags$p(HTML(paste0("A standalone version of this code can be downloaded from our ", 
-						 											 tags$a(href = "https://github.com/Dobbs-Lab/MENTHU", target = "_blank", "GitHub repository"),
+						 											 tags$a(href = "https://github.com/FriedbergLab/MENTHU", target = "_blank", "GitHub repository"),
 						 											 "."))),
 						 		tags$p(HTML(paste0("There are extensive installation/usage instructions available in the GitHub ", 
-						 											 tags$a(href = "https://github.com/Dobbs-Lab/MENTHU#how-to-run-menthu-locally", target = "_blank", "README"), 
+						 											 tags$a(href = "https://github.com/FriedbergLab/MENTHU#how-to-run-menthu-locally", target = "_blank", "README"), 
 						 											 " file."))),
 						 		tags$p("You can clone the repository with the following git command:"),
-						 		tags$p(tags$code("git clone https://github.com/Dobbs-Lab/MENTHU.git"), style = "text-align:center;"),
+						 		tags$p(tags$code("git clone https://github.com/FriedbergLab/MENTHU.git"), style = "text-align:center;"),
 						 		tags$p(HTML(paste0("MENTHU is available under the GNU General Public License v3 (GPL 3.0). You can read the license ",
-						 											 tags$a(href = "https://github.com/Dobbs-Lab/MENTHU/blob/master/LICENSE", target = "_blank", "here"),
+						 											 tags$a(href = "https://github.com/FriedbergLab/MENTHU/blob/master/LICENSE", target = "_blank", "here"),
 						 											 "."))),
 						 		tags$p(HTML(paste0("The MENTHU R code is provided as-is; please be aware that you modify the code at your own risk. ",
 						 											 "We are unable to provide technical support for modified versions.")))
@@ -655,20 +655,20 @@ shinyUI(function(request){
 						 		tags$p(HTML(paste0("If you want to run MENTHU for very large genes (e.g., TTN, DMD) or for a large number of genes, ", 
 						 											 "we recommend that you use the MENTHU command-line tool."))),
 						 		tags$p("You can download the command-line tool from its ",
-						 					 tags$a(href = "https://github.com/Dobbs-Lab/MENTHU-command-line", target = "_blank", "GitHub repository"),
+						 					 tags$a(href = "https://github.com/FriedbergLab/MENTHU-command-line", target = "_blank", "GitHub repository"),
 						 					 "."),
 						 		tags$p(HTML(paste0("There are extensive usage and installation instructions for this tool in its ReadMe file, and on GitHub. "),
 						 								"You can clone the repository with the following git command:")),
-						 		tags$p(tags$code("git clone https://github.com/Dobbs-Lab/MENTHU-command-line.git"), style = "text-align:center;")
+						 		tags$p(tags$code("git clone https://github.com/FriedbergLab/MENTHU-command-line.git"), style = "text-align:center;")
 						 	),
 						 	
 						 		wellPanel(
 						 			h3("Run MENTHU Locally"),
 						 		tags$p(HTML(paste0("If you have R installed on your system, you can also follow the instructions ",
-						 											 tags$a(href = "https://github.com/Dobbs-Lab/MENTHU#3-run-menthu-locally", target = "_blank", "here"),
+						 											 tags$a(href = "https://github.com/FriedbergLab/MENTHU#3-run-menthu-locally", target = "_blank", "here"),
 						 											 " to easily run the MENTHU RShiny app from R, without dealing with Git."))),
 						 		p("MENTHU is also available as a Docker container image. You can clone the Docker image using the following command:"),
-						 		tags$p(tags$code("sudo docker pull cmmann/menthu"), style = "text-align:center;")
+						 		tags$p(tags$code("sudo docker pull parnaljoshi/menthu"), style = "text-align:center;")
 						 		
 						 	))
 						 	
@@ -681,7 +681,7 @@ shinyUI(function(request){
 						 	#Sidebar panel with links
 						 	column(2, wellPanel(
 						 		#Sidebar panel with links
-						 		tags$div(tags$span(a(href   = "http://genesculpt.org/gss/", 
+						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
 						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -692,7 +692,7 @@ shinyUI(function(request){
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
 						 												 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
-						 		tags$div(tags$span(a(href   = "http://genesculpt.org/gss/", 
+						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
 						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -704,10 +704,10 @@ shinyUI(function(request){
 						 		tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
 						 												 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
 						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://github.com/Dobbs-Lab/MENTHU", 
+						 		tags$div(tags$span(a(href   = "https://github.com/FriedbergLab/MENTHU", 
 						 												 target = "_blank", tags$img(src = "GitHub_Logo.png",                   width = "100%")))),
 						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://hub.docker.com/r/cmmann/menthu", 
+						 		tags$div(tags$span(a(href   = "https://hub.docker.com/r/parnaljoshi/menthu", 
 						 												 target = "_blank", tags$img(src = "Docker_Logo.png",                   width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href = "https://dill-picl.org", 
@@ -730,7 +730,7 @@ shinyUI(function(request){
 						 	titlePanel(""),
 						 	#Sidebar panel with links
 						 	column(2, wellPanel(
-						 		tags$div(tags$span(a(href   = "http://genesculpt.org/gss/", 
+						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
 						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -742,10 +742,10 @@ shinyUI(function(request){
 						 		tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
 						 												 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
 						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://github.com/Dobbs-Lab/MENTHU", 
+						 		tags$div(tags$span(a(href   = "https://github.com/FriedbergLab/MENTHU", 
 						 												 target = "_blank", tags$img(src = "GitHub_Logo.png",                   width = "100%")))),
 						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://hub.docker.com/r/cmmann/menthu", 
+						 		tags$div(tags$span(a(href   = "https://hub.docker.com/r/parnaljoshi/menthu", 
 						 												 target = "_blank", tags$img(src = "Docker_Logo.png",                   width = "100%"))))
 						 		
 						 	)),
@@ -763,7 +763,7 @@ shinyUI(function(request){
 						 	titlePanel(""),
 						 	#Sidebar panel with links
 						 	column(2, wellPanel(
-						 		tags$div(tags$span(a(href   = "http://genesculpt.org/gss/", 
+						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
 						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -775,10 +775,10 @@ shinyUI(function(request){
 						 		tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
 						 												 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
 						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://github.com/Dobbs-Lab/MENTHU", 
+						 		tags$div(tags$span(a(href   = "https://github.com/FriedbergLab/MENTHU", 
 						 												 target = "_blank", tags$img(src = "GitHub_Logo.png",                   width = "100%")))),
 						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://hub.docker.com/r/cmmann/menthu", 
+						 		tags$div(tags$span(a(href   = "https://hub.docker.com/r/parnaljoshi/menthu", 
 						 												 target = "_blank", tags$img(src = "Docker_Logo.png",                   width = "100%"))))
 						 		
 						 	)),
@@ -806,7 +806,7 @@ shinyUI(function(request){
 						 	
 						 	#Sidebar panel with links
 						 	column(2, wellPanel(
-						 		tags$div(tags$span(a(href   = "http://genesculpt.org/gss/", 
+						 		tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
 						 												 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
@@ -818,10 +818,10 @@ shinyUI(function(request){
 						 		tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
 						 												 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
 						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://github.com/Dobbs-Lab/MENTHU", 
+						 		tags$div(tags$span(a(href   = "https://github.com/FriedbergLab/MENTHU", 
 						 												 target = "_blank", tags$img(src = "GitHub_Logo.png",                   width = "100%")))),
 						 		tags$br(),
-						 		tags$div(tags$span(a(href   = "https://hub.docker.com/r/cmmann/menthu", 
+						 		tags$div(tags$span(a(href   = "https://hub.docker.com/r/parnaljoshi/menthu", 
 						 												 target = "_blank", tags$img(src = "Docker_Logo.png",                   width = "100%"))))
 						 		
 						 	)),
