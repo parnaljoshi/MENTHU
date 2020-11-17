@@ -780,7 +780,7 @@ shinyServer(function(input, output, session){
 			}
 			
 			# Update progress
-			progress$inc(detail = "Retrieving GenBank entry...", value = 0.1)
+			progress$set(detail = "Retrieving GenBank entry...", value = 0.1)
 			
 			# Try to pull genbank entry associated with accession
 			# Get the GenBank sequence with exon/intron information
@@ -1005,13 +1005,13 @@ shinyServer(function(input, output, session){
 			}
 			
 			# Update progress when Ensembl retrieval starts
-			progress$inc(detail = "Retrieving Ensembl entry...", value = 0.1)
+			progress$set(detail = "Retrieving Ensembl entry...", value = 0.1)
 			
 			# Make sure Ensembl is up and responsive
 			if(isEnsemblUp()){
 				ensemblInfo <- handleEnsemblInput(input$ensemblId, wiggle = TRUE, wiggleRoom = 39)
 				
-				progress$inc(detail = "Processing Ensembl entry...", value = 0.1)
+				progress$set(detail = "Processing Ensembl entry...", value = 0.1)
 				
 				# If the entry is NOT an exon
 				if(getEnsemblIdType(input$ensemblId, check = TRUE) != "exon"){
