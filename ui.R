@@ -692,7 +692,7 @@ shinyUI(function(request){
 						 		tags$br(),
 						 		tags$div(tags$span(a(href   = "https://www.genomewritersguild.org/", 
 						 												 target = "_blank", tags$img(src = "genome-writers-guild-logo_DAC.png", width = "100%")))),
-						 		#tags$div(tags$span(a(href   = "http://3.17.87.198/gss/", 
+						 		#tags$div(tags$span(a(href   = "http://www.genesculpt.org/gss/", 
 						 		#										 target = "_blank", tags$img(src = "GSS logo small.png",                width = "100%")))),
 						 		#tags$br(),
 						 		#tags$div(tags$span(a(href   = "https://www.iastate.edu/",   
