@@ -12,12 +12,12 @@ RUN apt-get update && apt-get install -y \
     libxt-dev \
     libssl-dev \
     libssh2-1-dev \
-    libssl1.0.0 \
+    #libssl1.0.0 \
     libxml2-dev
 
 # install package dependencies for MENTHU
 #RUN R -e "install.packages(c('shiny', 'XML', 'shinyjs', 'rhandsontable', 'plyr', 'stringr', 'stringi', 'rentrez', 'rlist', 'DT', 'devtools', 'httpuv', 'httr'), repos='https://cloud.r-project.org/')" -e 'source("http://bioconductor.org/biocLite.R")' -e 'biocLite("Biostrings")' -e 'devtools::install_github("rstudio/shiny-incubator")'
-RUN R -e "install.packages(c('shiny', 'XML', 'xml2', 'shinyjs', 'rhandsontable', 'plyr', 'stringr', 'stringi', 'rentrez', 'rlist', 'DT', 'devtools', 'curl', 'plyr', 'jsonlite', 'httr'), repos='https://cloud.r-project.org/')" -e 'source("http://bioconductor.org/biocLite.R")' -e 'biocLite("Biostrings")' -e 'devtools::install_github("rstudio/shiny-incubator")'
+RUN R -e "install.packages(c('shiny', 'XML', 'xml2', 'shinyjs', 'rhandsontable', 'plyr', 'stringr', 'stringi', 'rentrez', 'rlist', 'DT', 'devtools', 'curl', 'plyr', 'jsonlite', 'httr', 'BiocManager', 'remotes'), repos='https://cloud.r-project.org/')" -e 'BiocManager::install("Biostrings")' -e 'remotes::install_github("rstudio/shiny-incubator")'
 
 # Copy MENTHU to image
 RUN mkdir /root/menthu/
