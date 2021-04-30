@@ -785,13 +785,11 @@ shinyUI(function(request){
 						 	
 						 	#Text area in center of page
 						 	column(9, wellPanel(
-						 		p("Please use the form below, or email us directly at help@genesculpt.org, to report issues and request support.")
+						 		p("Please use the form below, or email us directly at parnal@iastate.edu, to report issues and request support.")
 						 	),
 						 	
 						 	tags$iframe(id           = "googleform", 
-						 							src          = paste0("https://docs.google.com/forms/d/e/1FAIpQLSeq9aDRj6EOCskBwPsA2PFQ2LsKxT4v85-", 
-						 																		"rGTlYQOk0n8X2Gw/viewform?usp=pp_url&entry.358268393&entry.1646278736=MENTHU&entry.", 
-						 																		"1934309806&entry.565411344&entry.754537383&entry.826100992"),
+						 							src          = paste0("https://docs.google.com/forms/d/e/1FAIpQLScrn7aI139IKLax5W0Gz8t3KGbc5p_UgtHNc7wVFi_U5hRbcw/viewform?embedded=true"),
 						 							width        = 760,
 						 							height       = 2000,
 						 							frameborder  = 0,
