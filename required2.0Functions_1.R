@@ -1766,7 +1766,7 @@ ohStitch <- function(pamList, custOhList){
 
 pamStitch <- function(pamList, custPamList){
 	# If there are pre-gen PAMs used...
-	if(pamList != ""){
+	if (length(pamList) > 0 && any(pamList != "")) {
 		# Split the custom PAM list
 		custList   <- strsplit(custPamList, "[\\, |\\,| ]+")
 		# Add to the pre-gen PAM list
