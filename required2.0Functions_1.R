@@ -1703,7 +1703,7 @@ convertToNumeric <- function(characterStringOfNumbers){
 
 distStitch <- function(pamList, custList){
 	# If there are pre-gen PAMs used...
-	if(pamList != ""){
+	if (length(pamList) > 0 && any(pamList != "")) {
 		# Repeat -3 for each pre-computed PAM (the ones currently on the list all cut 3 bp upstream of the PAM)
 		pamDistList  <- rep(-3, length(pamList))
 		# Split the custom cut distance list
