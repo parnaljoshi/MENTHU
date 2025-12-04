@@ -81,8 +81,8 @@ install.packages(c("shiny", "shinyjs", "Rcpp", "plyr", "stringr", "stringi", "sh
                    "rentrez", "rlist", "DT", "xlsx", "devtools", "rhandsontable", "httr", "jsonlite", "xml2"))
 
 #Install 'Biostrings' package from Bioconductor
-source("https://bioconductor.org/biocLite.R")
-biocLite("Biostrings")
+install.packages("BiocManager")
+BiocManager::install("Biostrings")
 
 #Install 'ShinyIncubator' from GitHub
 devtools::install_github("rstudio/shiny-incubator", force = TRUE)
