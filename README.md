@@ -92,7 +92,7 @@ devtools::install_github("rstudio/shiny-incubator", force = TRUE)
 
 ```
 #Retrieve, load, and run MENTHU from GitHub
-shiny::runGitHub("MENTHU", "Dobbs-Lab")
+shiny::runGitHub("MENTHU", "FriedbergLab")
 ```
 
 You're all set!
