@@ -77,8 +77,10 @@ You can copy and paste the code blocks below into your R/RStudio console to run 
 #Install packages required to run MENTHU; you can also run this code to update these packages
 
 #Install CRAN packages
-install.packages(c("shiny", "shinyjs", "Rcpp", "plyr", "stringr", "stringi", "shinyTable", 
-                   "rentrez", "rlist", "DT", "xlsx", "devtools", "rhandsontable", "httr", "jsonlite", "xml2"))
+install.packages(c('Rcpp', 'stringi', 'jsonlite', 'curl', 'httr'), repos='https://cloud.r-project.org/')
+install.packages(c('stringr', 'plyr', 'xml2', 'rentrez', 'rlist'), repos='https://cloud.r-project.org/')
+install.packages('promises', type='source', repos='https://cloud.r-project.org/')
+install.packages(c('shiny', 'shinyjs', 'DT', 'rhandsontable'), repos='https://cloud.r-project.org/')
 
 #Install 'Biostrings' package from Bioconductor
 install.packages("BiocManager")
