@@ -76,7 +76,7 @@ pamScan <- function(pamList, cutDistList, ohList, targetList, exonList, exonStar
 	matchesNeg <- sapply(pamNegRegs, function(x) sapply(targetList, function(y) gregexpr(x, y, perl = TRUE)))
 	
 	#If there is only a single exon and a single PAM
-	if(class(matchesPos) == "list" && length(pamList) == 1){
+	if(is.list(matchesPos) && length(pamList) == 1){
 		#Extract the loci of the matches
 		matchesPos <- sapply(1:length(matchesPos), function(x) matchesPos[[x]][1:length(matchesPos[[x]])])
 		matchesNeg <- sapply(1:length(matchesNeg), function(x) matchesNeg[[x]][1:length(matchesNeg[[x]])])

@@ -1703,7 +1703,7 @@ convertToNumeric <- function(characterStringOfNumbers){
 
 distStitch <- function(pamList, custList){
 	# If there are pre-gen PAMs used...
-	if(pamList != ""){
+	if (length(pamList) > 0 && any(pamList != "")) {
 		# Repeat -3 for each pre-computed PAM (the ones currently on the list all cut 3 bp upstream of the PAM)
 		pamDistList  <- rep(-3, length(pamList))
 		# Split the custom cut distance list
@@ -1736,7 +1736,7 @@ distStitch <- function(pamList, custList){
 
 ohStitch <- function(pamList, custOhList){
 	# If there are pre-gen PAMs used...
-	if(pamList != ""){
+	if (length(pamList) > 0 && any(pamList != "")) {
 		# Repeat 0 for each pre-computed PAM (the ones currently on the list all cut 3 bp upstream of the PAM)
 		ohLenList  <- rep(0, length(pamList))
 		# Split the custom overhang length list
@@ -1766,7 +1766,7 @@ ohStitch <- function(pamList, custOhList){
 
 pamStitch <- function(pamList, custPamList){
 	# If there are pre-gen PAMs used...
-	if(pamList != ""){
+	if (length(pamList) > 0 && any(pamList != "")) {
 		# Split the custom PAM list
 		custList   <- strsplit(custPamList, "[\\, |\\,| ]+")
 		# Add to the pre-gen PAM list
