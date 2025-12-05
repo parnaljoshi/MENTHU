@@ -85,9 +85,6 @@ install.packages(c('shiny', 'shinyjs', 'DT', 'rhandsontable'), repos='https://cl
 #Install 'Biostrings' package from Bioconductor
 install.packages("BiocManager")
 BiocManager::install("Biostrings")
-
-#Install 'ShinyIncubator' from GitHub
-devtools::install_github("rstudio/shiny-incubator", force = TRUE)
 ```
 
 ### Run this code every time you want to use the tool, including the first time:
