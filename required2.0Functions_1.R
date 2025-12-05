@@ -35,7 +35,7 @@ calculateMENTHUGeneSeq <- function(casList, cutDistList, ohList, wiggle = TRUE, 
 	####### Subset geneSeq to exon sequences ###########
 	# Deal with the case in which exons are specified and extra context 
 	# should be included to examine sites where the gRNA would run off the exon
-	if((wiggle == TRUE) && (class(exonDF) == "data.frame")){
+	if((wiggle == TRUE) && ("data.frame" %in% class(exonDF))){
 		# Ensure extra context doesn't run off the end of the whole sequence
 		exStart <- sapply(1:nrow(exonDF), function(x) if((exonDF$exonStart[x] - wiggleRoom) < 1){1}                           else {exonDF$exonStart[x] - wiggleRoom})
 		
@@ -46,7 +46,7 @@ calculateMENTHUGeneSeq <- function(casList, cutDistList, ohList, wiggle = TRUE, 
 		exonSeqs <- substring(rep(toupper(geneSeq), length(exStart)), exStart, exEnd)
 		
 		# Deal with the case in which exons are specified but extra context should not be included
-	} else if((!wiggle) && (class(exonDF) == "data.frame")){
+	} else if((!wiggle) && ("data.frame" %in% class(exonDF))){
 		exonSeqs <- substring(rep(toupper(as.character(geneSeq)), nrow(exonDF)), 
 													exonDF$exonStart, 
 													exonDF$exonEnd)
@@ -64,7 +64,7 @@ calculateMENTHUGeneSeq <- function(casList, cutDistList, ohList, wiggle = TRUE, 
 		progress$inc(0.01, detail = "Scanning for CRISPR target sites...")
 		
 		# If there is exon information, use it to correct indexing, otherwise, exonStarts is NULL
-		if(class(exonDF) == "data.frame"){
+		if(inherits(exonDF, "data.frame")){
 			pamSites <- pamScan(pamList, 
 													cutDistList, 
 													ohList,
@@ -98,7 +98,7 @@ calculateMENTHUGeneSeq <- function(casList, cutDistList, ohList, wiggle = TRUE, 
 		# Update progress bar
 		progress$inc(0.01, detail = "Pre-processing CRISPR target sites...")
 		
-		if(class(exonDF) == "data.frame"){
+		if(inherits(exonDF, "data.frame")){
 			pamSites <- unique(suppressMessages(plyr::join(pamSites, exonDF, by = 'Exon_Num')))
 			
 		} else {
@@ -166,7 +166,7 @@ calculateMENTHUGeneSeq <- function(casList, cutDistList, ohList, wiggle = TRUE, 
 			rFlag <- TRUE
 			
 			# If there are exon inputs
-			if(class(exonDF) == "data.frame"){
+			if(inherits(exonDF, "data.frame")){
 				# Set all exon starts to the exon starts in the input frame
 				# Submit talen info to talPal
 				talSites <- talPal(exonSeqs,
@@ -200,7 +200,7 @@ calculateMENTHUGeneSeq <- function(casList, cutDistList, ohList, wiggle = TRUE, 
 			# Update progress bar
 			progress$inc(0.01, detail = "Pre-processing TALEN target sites...")
 			
-			if(class(exonDF) == "data.frame"){
+			if(inherits(exonDF, "data.frame")){
 				talSites <- unique(suppressMessages(plyr::join(talSites, exonDF, by = 'Exon_Num')))
 				
 			} else {
@@ -234,7 +234,7 @@ calculateMENTHUGeneSeq <- function(casList, cutDistList, ohList, wiggle = TRUE, 
 		}
 		
 		# If there is no exon data input, create a dummy data frame to have the 'exon' be the entire gene sequence, starting on nt 1
-		if(class(exonDF) != "data.frame"){
+		if(!inherits(exonDF, "data.frame")){
 			exonDF <- data.frame(exonStart        = 1, 
 													 exonEnd          = nchar(geneSeq), 
 													 stringsAsFactors = FALSE)
@@ -2016,7 +2016,7 @@ stripWhiteSpace.data.frame <- function(wsco){
 	count <- 0
 	dDF <- wsco
 	for(i in 1:ncol(wsco)){
-		if(class(wsco[,i])=="character"){
+		if(inherits(wsco[,i], "character")){
 			dDF[,i] <- stripWhiteSpace(wsco[,i])
 			count <- count + 1
 		}

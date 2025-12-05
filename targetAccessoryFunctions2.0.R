@@ -16,15 +16,15 @@ getPreGenPamList <- function(pamList){
 	cas12aLike <- c('TTTN', 'TTTV', 'TTN', 'YTN')
 	
 	# Drop 'redundant' PAMs to save time; retain the broader case
-	if("NGG" %in% pamList && "NRG" %in% pamList){
+	if(any("NGG" %in% pamList) & any("NRG" %in% pamList)){
 		pamList <- pamList[-which(pamList == "NGG")] 
 	}
 	
-	if("TTTV" %in% pamList && "TTTN" %in% pamList){
+	if(any("TTTV" %in% pamList) & any("TTTN" %in% pamList)){
 		pamList <- pamList[-which(pamList == "TTTN")] 
 	}
 	
-	if("TTN" %in% pamList && "YTN" %in% pamList){
+	if(any("TTN" %in% pamList) & any("YTN" %in% pamList)){
 		pamList <- pamList[-which(pamList == "TTN")] 
 	}
 	
@@ -76,7 +76,7 @@ pamScan <- function(pamList, cutDistList, ohList, targetList, exonList, exonStar
 	matchesNeg <- sapply(pamNegRegs, function(x) sapply(targetList, function(y) gregexpr(x, y, perl = TRUE)))
 	
 	#If there is only a single exon and a single PAM
-	if(is.list(matchesPos) && length(pamList) == 1){
+	if(isTRUE(inherits(matchesPos, "list")) & isTRUE(length(pamList) == 1)){
 		#Extract the loci of the matches
 		matchesPos <- sapply(1:length(matchesPos), function(x) matchesPos[[x]][1:length(matchesPos[[x]])])
 		matchesNeg <- sapply(1:length(matchesNeg), function(x) matchesNeg[[x]][1:length(matchesNeg[[x]])])
@@ -103,7 +103,7 @@ pamScan <- function(pamList, cutDistList, ohList, targetList, exonList, exonStar
 															contextCondition = rep(FALSE,          length(matchesNeg)),
 															stringsAsFactors = FALSE)
 		
-	} else if(class(matchesPos) == "list" && length(pamList) > 1){	
+	} else if(isTRUE(inherits(matchesPos, "list")) & isTRUE(length(pamList) > 1)){	
 		#Extract the loci of the matches
 		matchesPos <- sapply(1:length(matchesPos), function(x) matchesPos[[x]][1:length(matchesPos[[x]])])
 		matchesNeg <- sapply(1:length(matchesNeg), function(x) matchesNeg[[x]][1:length(matchesNeg[[x]])])
@@ -291,7 +291,7 @@ talPal <- function(targetList, findCut = TRUE, wiggle = TRUE, wiggleRoom = 39, r
 		matchesPosT <- sapply(patternPos, function(x) sapply(targetList, function(y) gregexpr(x, y, perl = TRUE)))
 		#matchesNegT <- sapply(patternNeg, function(x) sapply(targetList, function(y) gregexpr(x, y, perl = TRUE)))
 		
-		if(class(matchesPosT) == "list"){
+		if(inherits(matchesPosT, "list")){
 			#Extract the matches
 			matchesPosT <- sapply(1:length(matchesPosT), function(x) matchesPosT[[x]][1:length(matchesPosT[[x]])])
 			#matchesNegT <- sapply(1:length(matchesNegT), function(x) matchesNegT[[x]][1:length(matchesNegT[[x]])])
@@ -420,8 +420,8 @@ getTalPatterns <- function(armin, armax, spamin, spamax){
 	patListNeg <- sapply(spamin:spamax, function(x) sapply(armin:armax, function(y) sapply(armin:armax, function(z) paste0("(?=(A[ACGT]{", x + y + z - 2, "}T))"))))
 	patList    <- sapply(spamin:spamax, function(x) sapply(armin:armax, function(y) sapply(armin:armax, function(z) paste0(y, "/", x, "/", z))))
 	
-	if(class(patListPos) != "character"){
-		if(ncol(patListPos > 2)){
+	if(!inherits(patListPos, "character")){
+		if(ncol(patListPos) > 2){
 			patListPos <- patListPos[, -2]
 			patListNeg <- patListNeg[, -2]
 			patList    <-    patList[, -2]
@@ -482,7 +482,7 @@ talCorral <- function(talSeq, armin = 15, armax = 18, spamin = 14, spamax = 16) 
 		for (i in 1:length(tempL)) {
 			for (j in 1:length(tempR)) {
 				spa <- substr(talSeq[[k]],(nchar(tempL[i]) + 1),(nchar(talSeq[[k]]) - nchar(tempR[j])))
-				if (nchar(spa) >= spamin && nchar(spa) <= spamax) {
+				if (isTRUE(nchar(spa) >= spamin) & isTRUE(nchar(spa) <= spamax)) {
 					spacer <- c(spacer,spa)
 					talL   <- c(talL,tempL[i])
 					talR   <- c(talR,tempR[j])
